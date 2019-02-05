@@ -159,7 +159,7 @@ function getToken() {
             // subsequent calls to getToken will return from cache.
             messaging.getToken()
                 .then(function(currentToken) {
-                    console.log(`Getting token ${token}`)
+                    console.log(`Getting token`, token) // token is object
                     if (currentToken) {
                         sendTokenToServer(currentToken);
                         updateUIForPushEnabled(currentToken);
